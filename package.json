@@ -1,0 +1,28 @@
+{
+  "name": "otalk-model-message",
+  "description": "Model for Otalk XMPP messages",
+  "version": "1.0.0",
+  "author": "Lance Stout <lance@andyet.net>",
+  "bugs": {
+    "url": "https://github.com/otalk/otalk-model-message/issues"
+  },
+  "dependencies": {
+    "ampersand-jid-datatype-mixin": "^1.0.0",
+    "ampersand-state": "^4.3.9"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.4",
+    "precommit-hook": "^1.0.7"
+  },
+  "homepage": "https://github.com/otalk/otalk-model-message",
+  "keywords": [
+    "otalk",
+    "xmpp"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/otalk/otalk-model-message"
+  }
+}
