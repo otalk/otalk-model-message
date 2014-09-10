@@ -97,6 +97,20 @@ module.exports = State.extend({dataTypes: JIDMixin.dataTypes}, {
                 return this.delayedTime && !isNaN(this.delayedTime.valueOf());
             }
         },
+        comparator: {
+            // We generally want to sort messages by timestamp, based on when
+            // they were received. The `comparator` timestamp is different than
+            // the `timestamp` field because we don't want an edited message to
+            // get shuffled around because its timestamp changed.
+            deps: ['createdTime', 'delayed'],
+            fn: function () {
+                if (this.delayed) {
+                    return this.delayedTime;
+                } else {
+                    return this.createdTime;
+                }
+            }
+        },
         timestamp: {
             deps: ['createdTime', 'edited', 'delayed'],
             fn: function () {

@@ -33,6 +33,10 @@ A peristent and unique ID for this message used for message archive history.
 
 The textual content of the message.
 
+#### `.comparator` - `{Date}`
+
+Either the `.createdTime` or `.delayedTime` value. We generally want this value for sorting messages instead of using the `.timestamp` directly, because we don't want messages that have been edited to suddenly jump around.
+
 #### `.createdTime` - `{Date}`
 
 The timestamp of when the `Message` object was created, which in normal use cases will be when the message was sent.
