@@ -2,7 +2,7 @@ var State = require('ampersand-state');
 var JIDMixin = require('ampersand-jid-datatype-mixin');
 
 
-module.exports = State.extend(JIDMixin, {
+module.exports = State.extend({dataTypes: JIDMixin.dataTypes}, {
     initialize: function () {
         this.createdTime = new Date(Date.now());
     },
