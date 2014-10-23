@@ -151,9 +151,12 @@ module.exports = State.extend({dataTypes: JIDMixin.dataTypes}, {
             subject: msg.subject,
             body: msg.body,
             uris: msg.uris,
-            delayedTime: msg.delayedTime,
             editedTime: msg.delayedTime || new Date(Date.now()),
             receiptReceived: false
         });
+
+        if (msg.delayedTime) {
+            this.delayedTime = msg.delayedTime;
+        }
     }
 });
