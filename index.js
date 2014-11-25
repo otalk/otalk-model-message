@@ -74,15 +74,15 @@ module.exports = State.extend({dataTypes: JIDMixin.dataTypes}, {
             }
         },
         pendingAck: {
-            deps: ['ackRequested', 'ackReceived'],
+            deps: ['isMine', 'ackRequested', 'ackReceived'],
             fn: function () {
-                return this.ackRequested && !this.ackReceived;
+                return this.isMine && this.ackRequested && !this.ackReceived;
             }
         },
         pendingReceipt: {
-            deps: ['receiptRequested', 'receiptReceived'],
+            deps: ['isMine', 'receiptRequested', 'receiptReceived'],
             fn: function () {
-                return this.receiptRequested && !this.receiptReceived;
+                return this.isMine && this.receiptRequested && !this.receiptReceived;
             }
         },
         edited: {
