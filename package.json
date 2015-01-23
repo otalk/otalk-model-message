@@ -1,7 +1,7 @@
 {
   "name": "otalk-model-message",
   "description": "Model for Otalk XMPP messages",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "author": "Lance Stout <lance@andyet.net>",
   "bugs": {
     "url": "https://github.com/otalk/otalk-model-message/issues"
