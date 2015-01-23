@@ -97,6 +97,10 @@ This flag will turn to `true` if the `.body` field starts with four characters `
 
 The XMPP stanza ID for the message. This is only intended for short-term tracking, not a globally unique or persistent ID.
 
+#### `.nick` - `{String}`
+
+An optional nickname used by the sender of the message for themself.
+
 #### `.parentThread` - `{String}`
 
 An opaque reference to the parent thread of conversation, if this message started a new thread.

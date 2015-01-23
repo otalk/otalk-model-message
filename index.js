@@ -27,7 +27,8 @@ module.exports = State.extend({dataTypes: JIDMixin.dataTypes}, {
         receiptRequested: 'boolean',
         subject: 'string',
         thread: 'string',
-        parentThread: 'string'
+        parentThread: 'string',
+        nick: 'string'
     },
 
     derived: {
